@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, Button } from 'react-native';
+// import { useNavigation } from '@react-navigation/native'; // Conceptual import
 import { getCurrentBtcPrice } from '../services/api';
 
 const HomeScreen = () => {
+  // const navigation = useNavigation(); // Conceptual: Get navigation object
   const [price, setPrice] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -58,9 +60,21 @@ const HomeScreen = () => {
           <Text style={styles.placeholderText}>24h Change: N/A</Text>
         </>
       ) : (
-        <Text style={styles.errorText}>No price data available.</Text> 
+        <Text style={styles.errorText}>No price data available.</Text>
       )}
       <Button title="Refresh" onPress={fetchPrice} disabled={loading} />
+      {/* Conceptual Button to navigate to HistoricalDataScreen */}
+      {/* This button relies on the navigation setup in App.js being functional */}
+      <View style={styles.navButtonContainer}>
+        <Button
+          title="View Historical Data"
+          onPress={() => {
+            // navigation.navigate('HistoricalData');
+            console.log('Conceptual navigation to HistoricalDataScreen');
+          }}
+          // disabled={loading} // You might want to disable if loading or if navigation isn't ready
+        />
+      </View>
     </View>
   );
 };
@@ -95,6 +109,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
+  navButtonContainer: {
+    marginTop: 20,
+  }
 });
 
 export default HomeScreen;
