@@ -1,0 +1,10 @@
+# This file is to ensure the 'icons' directory is tracked by git.
+# You can replace this with actual SVG icon components.
+
+# Example: MenuIcon.tsx
+# const MenuIcon = (props) => (
+#   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" {...props}>
+#     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+#   </svg>
+# );
+# export default MenuIcon;
