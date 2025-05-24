@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans"; // Updated Geist import
 import { GeistMono } from "geist/font/mono"; // Updated Geist import
-import "../../globals.css"; // Corrected path to globals.css
+import "../globals.css"; // Corrected path to globals.css
 
 import LayoutComponent from '@/components/layout/Layout'; // Renamed to avoid conflict with this Layout function
 import { ThemeProvider } from "@/components/theme-provider";
